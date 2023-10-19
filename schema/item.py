@@ -3,10 +3,10 @@ from database.models import Item
 from typing import List
 
 class ItemCreate(BaseModel):
-    name : str
+    name : str = ...
     description: str = None
-    price:float
-    tax:float
+    price:float 
+    tax:float = ...
 
 class ItemResponse(BaseModel):
     id: int
@@ -20,9 +20,3 @@ class ItemUpdate(BaseModel):
     description: str = None
     price:float
     tax:float
-
-# class ItemList(BaseModel):
-#     items: List[Item]
-
-#     class config:
-#         orm_mode = True

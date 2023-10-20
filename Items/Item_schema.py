@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from database.models import Item
+from Items.Items_models import Item
 from typing import List
 
 class ItemCreate(BaseModel):
